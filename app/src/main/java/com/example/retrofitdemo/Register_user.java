@@ -2,38 +2,31 @@ package com.example.retrofitdemo;
 
 public class Register_user
 {
-    private String name;
-    private String email;
-    private String password;
+    private Integer connection;
 
-    public Register_user(String name, String email, String password)
-    {
-        this.name = name;
-        this.email = email;
-        this.password = password;
+    private Integer result;
+
+    public Integer getConnection() {
+        return connection;
     }
 
-    public String getName() {
-        return name;
+    public void setConnection(Integer connection) {
+        this.connection = connection;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Integer getResult() {
+        return result;
     }
 
-    public String getEmail() {
-        return email;
+    public void setResult(Integer result) {
+        this.result = result;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    @Override
+    public String toString() {
+        return "RegisterData{" +
+                "connection=" + connection +
+                ", result=" + result +
+                '}';
     }
 }
