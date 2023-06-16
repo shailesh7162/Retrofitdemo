@@ -15,33 +15,31 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity
 {
-    EditText editname,editemail,editpassword;
-    Button btnok;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        editname=findViewById(R.id.editname);
-        editemail=findViewById(R.id.editemail);
-        editpassword=findViewById(R.id.editePassword);
-        btnok=findViewById(R.id.btmok);
 
-        Retro_Instance_Class.CallApi().RegisterUser("shai","sha@gmail.com","123").enqueue(new Callback<Register_user>() {
+
+        Retro_Instance_Class.CallApi().RegisterUser("mahesh","mahesh@gmail.com","12345").enqueue(new Callback<Register_user>() {
             @Override
-            public void onResponse(Call<Register_user> call, Response<Register_user> response) {
-                Log.d("TTT", "onResponse: Response="+response.body().toString());
-                if(response.body().getConnection()==1)
+            public void onResponse(Call<Register_user> call, Response<Register_user> response)
+            {
+                Log.d("TTT","onResponse: Response="+response.body().toString());
+                if (response.body().getConnection()==1)
                 {
-                    if(response.body().getResult()==1)
+                    if (response.body().getResult()==1)
                     {
                         Toast.makeText(MainActivity.this, "Successfully Registered", Toast.LENGTH_LONG).show();
                     }
-                    else if(response.body().getResult()==2)
+                    else if (response.body().getResult()==2)
                     {
                         Toast.makeText(MainActivity.this, "Already Registered", Toast.LENGTH_LONG).show();
                     }
-                    else {
+                    else
+                    {
                         Toast.makeText(MainActivity.this, "User not Registered", Toast.LENGTH_LONG).show();
                     }
                 }
@@ -54,7 +52,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onFailure(Call<Register_user> call, Throwable t)
             {
-                Log.e("TTT", "onResponse: Response="+t.getLocalizedMessage());
+                Log.e("TTT","onResponse: Response="+t.getLocalizedMessage());
             }
         });
     }
