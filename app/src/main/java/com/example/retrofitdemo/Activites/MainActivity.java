@@ -1,13 +1,14 @@
-package com.example.retrofitdemo;
+package com.example.retrofitdemo.Activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.retrofitdemo.R;
+import com.example.retrofitdemo.models.Register_user;
+import com.example.retrofitdemo.retrofitutil.Retro_Instance_Class;
 
 import retrofit2.Call;
 import retrofit2.Callback;

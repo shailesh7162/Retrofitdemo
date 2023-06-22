@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="#1FCD90"
-    tools:context=".MainActivity">
+    tools:context=".Activites.MainActivity">
 
     <EditText
         android:layout_width="match_parent"
