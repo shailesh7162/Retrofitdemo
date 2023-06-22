@@ -1,6 +1,6 @@
-package com.example.retrofitdemo.retrofitutil;
+package com.example.retrofitdemo.Fragments;
 
-import com.example.retrofitdemo.models.Register_user;
+import com.example.retrofitdemo.Models.Register_user;
 
 import retrofit2.Call;
 import retrofit2.http.Field;

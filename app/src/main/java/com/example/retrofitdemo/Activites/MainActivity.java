@@ -7,8 +7,8 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.retrofitdemo.R;
-import com.example.retrofitdemo.models.Register_user;
-import com.example.retrofitdemo.retrofitutil.Retro_Instance_Class;
+import com.example.retrofitdemo.Models.Register_user;
+import com.example.retrofitdemo.Fragments.Retro_Instance_Class;
 
 import retrofit2.Call;
 import retrofit2.Callback;

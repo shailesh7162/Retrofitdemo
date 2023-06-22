@@ -1,4 +1,4 @@
-package com.example.retrofitdemo.models;
+package com.example.retrofitdemo.Models;
 
 public class Register_user
 {
